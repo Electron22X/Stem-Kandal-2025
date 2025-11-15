@@ -175,9 +175,8 @@ class ProductRating {
                     ...review
                 }));
 
-                // Sort by timestamp (newest first) and limit to 20
+                // Sort by timestamp (newest first)
                 this.reviews.sort((a, b) => b.timestamp - a.timestamp);
-                this.reviews = this.reviews.slice(0, 20);
             } else {
                 this.reviews = [];
             }
