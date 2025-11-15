@@ -1,0 +1,242 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --bg-dark: #0a0a0f;
+    --bg-card: #111118;
+    --bg-elevated: #1a1a24;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b0;
+    --text-muted: #6b6b7b;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: rgba(0, 0, 0, 0.3);
+    --glow: rgba(99, 102, 241, 0.4);
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.footer {
+    background: var(--bg-card);
+    border-top: 1px solid var(--border);
+    padding: 60px 40px;
+    margin-top: 80px;
+    color: var(--text-primary);
+}
+
+/* School Logo */
+.school-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo-images {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px var(--glow));
+    transition: all 0.3s ease;
+}
+
+.footer-logo-images:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 30px var(--primary-light));
+}
+
+/* School Name */
+.school-name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Team Name */
+.team {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Description */
+.footer p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* About Us */
+.about-us {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.about-us a {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--gradient-1);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.about-us a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--glow);
+}
+
+/* Divider */
+.footer hr {
+    margin: 30px 0;
+    border: none;
+    height: 1px;
+    background: var(--border);
+}
+
+/* Follow Us Title */
+.footer h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+/* Social Media Links */
+.socailmedia-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.socailmedia-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.socailmedia-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-1);
+    transition: left 0.3s ease;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.socailmedia-links a:hover::before {
+    left: 0;
+}
+
+.socailmedia-links a:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--glow);
+}
+
+.socailmedia-links img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: brightness(1);
+}
+
+.socailmedia-links a:hover img {
+    filter: brightness(1.2) drop-shadow(0 0 8px var(--primary-light));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px;
+        margin-top: 60px;
+    }
+
+    .school-name {
+        font-size: 20px;
+    }
+
+    .team {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 13px;
+    }
+
+    .socailmedia-links {
+        gap: 20px;
+    }
+
+    .socailmedia-links a {
+        width: 45px;
+        height: 45px;
+    }
+
+    .socailmedia-links img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+        margin-top: 40px;
+    }
+
+    .footer-logo-images {
+        width: 60px;
+        height: 60px;
+    }
+
+    .school-name {
+        font-size: 18px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .socailmedia-links {
+        gap: 15px;
+    }
+
+    .socailmedia-links a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socailmedia-links img {
+        width: 18px;
+        height: 18px;
+    }
+}

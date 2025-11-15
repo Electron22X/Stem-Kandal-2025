@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rating.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script type="module" src="script/firebase-price.js"></script>
+    
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+    <nav class="navbar">
+        <div class="logo-container">
+        <img class="logo-images "src="assets/MoEYS - 2024.png" alt="">
+        <img class="logo-images "src="assets/IMG_0134.png" alt="">
+        <img class="logo-images "src="assets/IMG_20251112_173844_555.png" alt="">
+        </div>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></label>
+<div class="links-container">
+    <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+</svg>
+    </label>
+    <a href="product.html" class="link">Product</a>
+    <a href="about.html" class="link">About</a>
+    <a href="ourTeam.html" class="link">Our team</a>
+    <a href="contact.html" class="link">Contact</a>
+</div>
+    </nav>
+    <div class="container">
+        <p id="name_text">LAWN MOWER</p>
+        <img src="assets/image_2025-11-10_20-03-29.png" alt="robot" class="robot-image" id="mainImage">
+        <div class="color-container">
+            <div class="colors" id="black"></div>
+            <div class="colors" id="blue"></div>
+            <div class="colors" id="gray"></div>
+            <div class="colors" id="red"></div>
+        </div>
+        <div class="container3">
+        <div class="price-container">
+            <p id="priceText">$449.99</p>
+            <p id="discount">10%</p>
+            <p id="newPrice">$404.99</p>
+        </div>
+        <div class="button-container">
+            <button id="buyNow"><a href="https://t.me/ChhitVirakyut">Buy Now</a></button>
+        </div>
+    </div>
+
+    </div>
+    <div class="image-container">
+        <div class="image-wrapper">
+            <div class="image-cards">
+                <img src="assets/robot7.jpg" alt=""  id="imageCards">
+                <div id="nextButton">
+                Next
+            </div>
+            <div id="previousButton">
+                Prev
+            </div>
+            </div>
+        </div>
+    <div class="infor-container">
+        <p id="imageInfo">informations for images</p>
+    </div>
+    </div>
+    <div class="resurce-container">
+        <div class="power">
+            <img src="assets/icons/power_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="power icon" class="icon-images">
+            <p class="icon-text">1500W</p>
+        </div>
+        <div class="battery-life">
+            <img src="assets/icons/hourglass_empty_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="battery icon" class="icon-images">
+            <p class="icon-text">2 Hours</p>
+        </div>
+        <div class="force">
+            <img src="assets/icons/newtons-apple-svgrepo-com.svg" alt="force icon" class="icon-images">
+            <p class="icon-text">1000N</p>
+        </div>
+        <div class="weight">
+            <img src="assets/icons/weight_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="weight icon" class="icon-images">
+            <p class="icon-text">25kg</p>
+        </div>
+
+    </div>
+    <div class="size">
+        <div class="top-view">
+            <img src="assets/topView.jpg" alt="top view image" class="top-view-image">
+            <div class="infor">
+                <div class="width">
+                    <img src="assets/icons/fit_width_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="sideIcon">
+                    <p class="size-text">Width_A</p>
+                    <p class="size-number">45 cm</p>
+                </div>
+                <div class="width">
+                    <img src="assets/icons/fit_width_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="sideIcon">
+                    <p class="size-text">Width_B</p>
+                    <p class="size-number">103cm</p>
+                </div>
+            </div>
+        </div>
+        <div class="side-view">
+            <img src="assets/sideview.jpg" alt="side view image" class="side-view-image">
+            <div class="infor">
+                <div class="height">
+                    <img src="assets/icons/height_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="sideIcon">
+                    <p class="size-text">Height</p>
+                    <p class="size-number">59.5cm</p>
+                </div>
+                <div class="wheel-diameter">
+                    <img src="assets/icons/graphic-design-diameter-svgrepo-com.svg" alt="" class="sideIcon">
+                    <p class="size-text">Wheel Diameter</p>
+                    <p class="size-number">25cm</p>
+                </div>
+                <div class="wheel-thin">
+                    <img src="assets/icons/eraser_size_3_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="sideIcon">
+                    <p class="size-text">Wheel Thin</p>
+                    <p class="size-number">7cm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <video src=""></video>
+        <video src=""></video>
+    </div>
+    <div class="result-container">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Area</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>10 m²</td>
+                    <td>2 min 37 s</td>
+                </tr>
+                <tr>
+                    <td>16 m²</td>
+                    <td>3 min 46s</td>
+                </tr>
+                <tr>
+                    <td>25 m²</td>
+                    <td>6 min 8s</td>
+                </tr>
+                <tr>
+                    <td>50 m²</td>
+                    <td>17 min 43s</td>
+                </tr>
+            </table>
+        </div>
+        <div class="graph-container">
+            <h1>Area vs Duration</h1>
+        <div class="chart-wrapper">
+            <canvas id="myChart"></canvas>
+        </div>
+        </div>
+        <div class="calculator-container">
+            <div class="calc-content">
+        <h2>Duration Calculator</h2>
+        <p class="calc-description">Enter the area to calculate the duration</p>
+        
+        <div class="calc-input-group">
+            <label for="areaInput">Area (m²)</label>
+            <input 
+                type="number" 
+                id="areaInput" 
+                class="calc-input" 
+                placeholder="Enter area"
+                min="0"
+            >
+        </div>
+        
+        <button id="calcButton" class="calc-button">Calculate</button>
+        
+        <div id="calcResult" class="calc-result hidden">
+            <div class="result-item">
+                <span class="result-label">Area:</span>
+                <span id="resultArea" class="result-value">-</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Estimated Duration:</span>
+                <span id="resultDuration" class="result-value">-</span>
+            </div>
+        </div>
+    </div>
+        </div>
+
+    </div>
+
+    <div class="rating-system">
+    <h2>Product Rating & Reviews</h2>
+    
+    <div class="star-container">
+        <div class="rating-overview">
+            <div class="overall-rating">
+                <div class="rating-number" id="overallRating">0.0</div>
+                <div class="stars" id="starContainer"></div>
+                <div class="total-reviews" id="totalReviews">(0 reviews)</div>
+            </div>
+            
+            <div class="rating-bars">
+                <div class="rating-bar">
+                    <span class="bar-label">5 ★</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" id="fiveStarBar" style="width: 0%"></div>
+                    </div>
+                    <span class="bar-count" id="fiveStarCount">0</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="bar-label">4 ★</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" id="fourStarBar" style="width: 0%"></div>
+                    </div>
+                    <span class="bar-count" id="fourStarCount">0</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="bar-label">3 ★</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" id="threeStarBar" style="width: 0%"></div>
+                    </div>
+                    <span class="bar-count" id="threeStarCount">0</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="bar-label">2 ★</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" id="twoStarBar" style="width: 0%"></div>
+                    </div>
+                    <span class="bar-count" id="twoStarCount">0</span>
+                </div>
+                <div class="rating-bar">
+                    <span class="bar-label">1 ★</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" id="oneStarBar" style="width: 0%"></div>
+                    </div>
+                    <span class="bar-count" id="oneStarCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-feedback">
+        <h3>Customer Reviews</h3>
+        <div class="reviews-list" id="reviewsList">
+            <div class="no-reviews">No reviews yet. Be the first to review!</div>
+        </div>
+    </div>
+
+    <div class="rate-write-review">
+        <h3>Write a Review</h3>
+        <div class="review-form">
+            <div class="form-group">
+                <label>Your Rating</label>
+                <div class="stars-input" id="starsInput"></div>
+                <div class="selected-rating" id="selectedRating">Select a rating</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="reviewName">Your Name</label>
+                <input type="text" id="reviewName" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="reviewText">Your Review</label>
+                <textarea id="reviewText" placeholder="What do you think about our Product......" rows="5"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button class="submit-btn" id="submitBtn" disabled>Submit Review</button>
+                <button class="reset-btn" id="resetBtn">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="school-logo">
+        <img src="assets/IMG_20251112_173844_555.png" alt="school logo" class="footer-logo-images">
+
+    </div>
+    <h1 class="school-name">Samdach Akakmohathomapouthisal Chea Sim Prek Anhchanh High school</h1>
+    <h2 class="team">Stem Team Kandal 2025</h2>
+    <p>We are the team from New Geaneration High School Representation For Kandal Province. We have joined Stem competition to showcase our skills and knowledge in science, technology, engineering, and mathematics for 2025. </p>
+    <div class="about-us"> <a href="ourTeam.html">About Us</a></div>
+    <hr>
+    <h2>follow us</h2>
+    <div class="socailmedia-links">
+        <a href="https://www.facebook.com/share/1ABxorjkxy/"><img src="assets/icons/facebook-svgrepo-com.svg" alt=""></a>
+        <a href=""><img src="assets/icons/instagram-167-svgrepo-com.svg" alt=""></a>
+        <a href=""><img src="assets/icons/tiktok-svgrepo-com.svg" alt=""></a>
+    </div>
+
+</div>
+    <!-- Firebase SDK -->
+    
+    <!-- Rating system module -->
+    <script src="script/rating.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/image-infor.js"></script>
+</body>
+</html>

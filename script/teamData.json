@@ -1,0 +1,84 @@
+{
+    "memberSkills": [
+        {
+        "name": "Voem Puert",
+        "profile": "assets/members_profile/pout.png",
+        "role": "Team Leader & Mechanics",
+        "skill":{
+            "Mechanics": 90,
+            "Electronics": 75,
+            "Programming": 50
+        }
+        },
+        {
+        "name": "Menh Kemhouy",
+        "profile": "assets/members_profile/huy.png",
+        "role": "Mechanical woman Engineer",
+        "skill":{
+            "Mechanics": 70,
+            "Electronics": 30,
+            "Document": 80
+        }
+        },
+        {
+            "name": "Mong Meng Ly",
+            "profile": "assets/members_profile/ly.png",
+            "role": "Editor & Derector",
+            "skill":{
+                "Video editing": 95,
+                "Document": 85,
+                "Slide": 40
+            }
+        },
+        {
+            "name":"Reth Sreyvin",
+            "profile":"assets/members_profile/vin.png",
+            "role":"Reshearcher & Writer",
+            "skill":{
+                "Research": 96,
+                "Document": 70,
+                "Slide": 70
+            }
+        },
+        {
+            "name":"Minh James",
+            "profile":"assets/members_profile/james.png",
+            "role":"Electronics & Slider",
+            "skill":{
+                "Electronics": 71,
+                "Slide": 97,
+                "Mechanics": 40
+            }
+        },
+        {
+            "name":"Ban Sreykeo",
+            "profile":"assets/members_profile/keo.png",
+            "role":"Document & Reshearcher",
+            "skill":{
+                "Document": 90,
+                "Research": 80,
+                "Mechanics": 50
+            }
+        },
+        {
+            "name":"Saman Sokleap",
+            "profile":"assets/members_profile/leap.png",
+            "role":"Mechanical Engineer",
+            "skill":{
+                "Mechanics": 90,
+                "Electronics": 87,
+                "Document": 60
+            }
+        },
+        {
+            "name":"Chhit Virakyut",
+            "profile":"assets/members_profile/yut.png",
+            "role":"Designer & Programmer",
+            "skill":{
+                "Design": 85,
+                "Programming": 90,
+                "Electronics": 70
+            }
+        }
+    ]
+}

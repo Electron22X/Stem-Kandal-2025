@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+    <nav class="navbar">
+        <div class="logo-container">
+        <img class="logo-images "src="assets/MoEYS - 2024.png" alt="">
+        <img class="logo-images "src="assets/IMG_0134.png" alt="">
+        <img class="logo-images "src="assets/IMG_20251112_173844_555.png" alt="">
+        </div>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height=32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></label>
+<div class="links-container">
+    <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+</svg>
+    </label>
+    <a href="product.html" class="link">Product</a>
+    <a href="about.html" class="link">About</a>
+    <a href="ourTeam.html" class="link">Our team</a>
+    <a href="contact.html" class="link">Contact</a>
+</div>
+
+    </nav>
+    <form action="submit_form.php" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+
+
+
+    <div class="footer">
+    <div class="school-logo">
+        <img src="assets/IMG_20251112_173844_555.png" alt="school logo" class="footer-logo-images">
+
+    </div>
+    <h1 class="school-name">Samdach Akakmohathomapouthisal Chea Sim Prek Anhchanh High school</h1>
+    <h2 class="team">Stem Team Kandal 2025</h2>
+    <p>We are the team from New Geaneration High School Representation For Kandal Province. We have joined Stem competition to showcase our skills and knowledge in science, technology, engineering, and mathematics for 2025. </p>
+    <div class="about-us"> <a href="ourTeam.html">About Us</a></div>
+    <hr>
+    <h2>follow us</h2>
+    <div class="socailmedia-links">
+        <a href="https://www.facebook.com/share/1ABxorjkxy/"><img src="assets/icons/facebook-svgrepo-com.svg" alt=""></a>
+        <a href=""><img src="assets/icons/instagram-167-svgrepo-com.svg" alt=""></a>
+        <a href=""><img src="assets/icons/tiktok-svgrepo-com.svg" alt=""></a>
+    </div>
+
+</div>
+
+    <script src="script/main.js"></script>
+    <script src="script/contact.js"></script>
+</body>
+</html>

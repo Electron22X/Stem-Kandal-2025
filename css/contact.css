@@ -1,0 +1,125 @@
+:root {
+    --accent-color: #3399ff;       /* bright, lively blue for highlights */
+    --background-color: #0f1d40;   /* deep blue background for contrast */
+    --navbar-bg: #16285c;          /* slightly lighter dark blue for navbar */
+    --text-color: #e6f0ff;         /* off-white text for readability */
+    --text-shadow-color: #4da6ff;  /* subtle glowing blue for headings */
+    --link-hover: #66b3ff;          /* lighter blue for hover states */
+    --active-color: #1a73e8;        /* stronger blue for active elements */
+    --bg-card: #111118;
+}
+
+body {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 0 0 8px var(--text-shadow-color);
+    transition: text-shadow 0.3s ease;
+}
+
+h2:hover {
+    text-shadow: 0 0 15px var(--accent-color);
+}
+
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-color);
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--active-color);
+    transform: scale(1.05);
+}
+body {
+  background-color: var(--background-color);
+  background: radial-gradient(ellipse at center, rgb(0, 154, 126) 0%, rgb(0, 39, 88) 100%);
+}
+
+/* Optional: background gradient (night sky look) */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #036a4f 0%, #001a53 80%);
+  z-index: -1;
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 600px) {
+    form {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
