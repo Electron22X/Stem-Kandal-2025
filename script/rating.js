@@ -12,6 +12,42 @@ class ProductRating {
         this.createStarInput();
         this.attachEventListeners();
         this.loadReviews();
+        this.checkIfAlreadyReviewed();
+    }
+
+    checkIfAlreadyReviewed() {
+        const hasReviewed = localStorage.getItem('hasSubmittedReview');
+        if (hasReviewed === 'true') {
+            this.disableReviewForm();
+        }
+    }
+
+    disableReviewForm() {
+        const reviewName = document.getElementById('reviewName');
+        const reviewText = document.getElementById('reviewText');
+        const submitBtn = document.getElementById('submitBtn');
+        const starsInput = document.getElementById('starsInput');
+
+        if (reviewName) reviewName.disabled = true;
+        if (reviewText) reviewText.disabled = true;
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Already Reviewed';
+        }
+        if (starsInput) {
+            starsInput.style.pointerEvents = 'none';
+            starsInput.style.opacity = '0.5';
+        }
+
+        // Show message
+        const form = document.querySelector('.review-form');
+        if (form && !document.getElementById('alreadyReviewedMsg')) {
+            const msg = document.createElement('div');
+            msg.id = 'alreadyReviewedMsg';
+            msg.style.cssText = 'background: #fff3cd; border: 1px solid #ffc107; color: #856404; padding: 12px; border-radius: 8px; margin-bottom: 15px; text-align: center;';
+            msg.textContent = 'You have already submitted a review. Thank you!';
+            form.insertBefore(msg, form.firstChild);
+        }
     }
 
     createStarDisplay() {
@@ -137,9 +173,12 @@ class ProductRating {
                 });
 
                 if (response.ok) {
+                    // Mark as reviewed
+                    localStorage.setItem('hasSubmittedReview', 'true');
                     alert('Review submitted successfully!');
                     this.clearForm();
                     await this.loadReviews();
+                    this.disableReviewForm();
                 } else {
                     throw new Error('Failed to submit review');
                 }
